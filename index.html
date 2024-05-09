@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webサイトを構成する技術</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="l-header">
+    <div class="l-container">
+      <h1 class="c-title04">sample site</h1>
+      <div class="c-humberger-button-container">
+        <button type="button" class="c-humbarger-button" aria-controls="humbarger-menu" aria-expanded="false"
+          id="js-humbarger-button">
+          <span class="c-humbarger-line">
+            <span class="u-visuallyHidden">メニュー開閉</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <aside class="c-humbarger-menu" id="humbarger-menu">
+    <h2 class="c-title03">参考リンク</h2>
+    <ul>
+      <li><a href="https://developer.mozilla.org/ja/docs/Learn/Getting_started_with_the_web/HTML_basics"
+          target="_blank">HTMLの基本</a></li>
+      <li><a href="https://developer.mozilla.org/ja/docs/Learn/Getting_started_with_the_web/CSS_basics"
+          target="_blank">CSSの基本</a></li>
+      <li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript" target="_blank">JavaScriptの基本</a></li>
+    </ul>
+  </aside>
+  <main class="l-main">
+    <div class="l-container">
+      <h2 class="c-title01">Webサイトを構成する技術</h2>
+      <ul class="c-tab-container">
+        <li><button type="button" class="c-tab" aria-controls="panel01" aria-expanded="true">HTML</button></li>
+        <li><button type="button" class="c-tab" aria-controls="panel02" aria-expanded="false">CSS</button></li>
+        <li><button type="button" class="c-tab" aria-controls="panel03" aria-expanded="false">JavaScript</button></li>
+      </ul>
+      <div class="c-panel-container">
+        <section class="c-panel is-opened" id="panel01">
+          <h3 class="c-title05">HTML</h3>
+          <p>
+            HTML(HyperText Markup Language)はWebページのコンテンツを組み立てるためのマークアップ言語です。コンテンツとは段落や箇条書き、画像、表などの組み合わせで構成されています。
+          </p>
+        </section>
+        <section class="c-panel" id="panel02">
+          <h3 class="c-title05">CSS</h3>
+          <p>
+            CSS(Cascading Style Sheet)はWebページのスタイルを設定するための言語です。スタイルとは文字の色や種類、コンテンツの配置(レイアウト)などのことです。
+          </p>
+        </section>
+        <section class="c-panel" id="panel03">
+          <h3 class="c-title05">JavaScript</h3>
+          <p>
+            JavaScriptはWebページでよく使用されるスクリプト言語です。他のプログラミング言語と同様に、変数や配列、基本的な制御構文(順次処理、分岐処理、反復処理)などが利用できる他、HTMLの要素を操作すること(DOM)や、Webブラウザー上でのユーザーの操作(イベント)を起点にプログラムを動かすことができます。
+          </p>
+        </section>
+      </div>
+      <section class="l-section">
+        <h3 class="c-title02">よくある質問</h3>
+        <details class="c-accordion">
+          <summary class="c-accordion-label">「正しいHTML」とはなんですか？</summary>
+          <div class="c-accordion-panel">
+            <p>「構文的に正しいHTML」と「意味的に正しいHTML」のことです。</p>
+            <p>構文的に正しいHTMLとは、HTMLで定められた仕様に沿って記述されたHTMLのことです。</p>
+            <p>一方、意味的に正しいHTMLとは、マークアップした内容に対して使用している要素が適切かどうかなどで判断されます。</p>
+          </div>
+        </details>
+        <details class="c-accordion">
+          <summary class="c-accordion-label">CSSを編集してもブラウザに反映されません。</summary>
+          <div class="c-accordion-panel">
+            <p>ブラウザのキャッシュの影響が考えられます。</p>
+            <p>編集前の古いCSSのデータがブラウザのキャッシュに保存されており、その情報が読み込まれている可能性があります。</p>
+            <p>ブラウザを更新する際にキャッシュをクリアするには「ctrl+F5」でリロードしてみましょう。</p>
+          </div>
+        </details>
+        <details class="c-accordion">
+          <summary class="c-accordion-label">JavaScripの「オブジェクト」とはなんですか？
+          </summary>
+          <div class="c-accordion-panel">
+            <p>オブジェクトとは、関連するデータや機能をひとまとまりにしたものです。</p>
+            <p>オブジェクトは一般的にプロパティ(≒変数)とメソッド(≒関数)で構成されています。</p>
+          </div>
+        </details>
+      </section>
+    </div>
+  </main>
+  <footer class="l-footer">
+    <div class="l-container">
+      <small>&copy; Yusuke Fukumoto</small>
+    </div>
+  </footer>
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>
