@@ -1,10 +1,24 @@
 :root {
+  /* colors */
   --main-color: #32495f;
   --base-color: #ffffff;
   --accent-color: #bdc6ca;
   --sub-color: color-mix(in srgb, var(--main-color), white 80%);
-
   --black: #333333;
+
+  /* spaces */
+  --ratio: 1.5;
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
 }
 
 /*
@@ -115,7 +129,7 @@ button {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
-  margin-block: 3rem;
+  margin-block: var(--s4);
 }
 
 .l-footer {
@@ -127,8 +141,8 @@ button {
 }
 
 .l-section {
-  -webkit-margin-before: 2rem;
-  margin-block-start: 2rem;
+  -webkit-margin-before: var(--s3);
+          margin-block-start: var(--s3);
 }
 
 .l-container {
@@ -321,8 +335,8 @@ button {
 /* accordion */
 
 .c-accordion+.c-accordion {
-  -webkit-margin-before: 0.8rem;
-  margin-block-start: 0.8rem;
+  -webkit-margin-before: var(--s1);
+          margin-block-start: var(--s1);
 }
 
 .c-accordion-label {
@@ -335,14 +349,14 @@ button {
 }
 
 .c-accordion-panel {
-  -webkit-margin-before: 1rem;
-  margin-block-start: 1rem;
-  -webkit-padding-start: 1rem;
-  padding-inline-start: 1rem;
+  -webkit-margin-before: var(--s0);
+          margin-block-start: var(--s0);
+  -webkit-padding-start: 1em;
+          padding-inline-start: 1em;
 
   p+p {
-    -webkit-margin-before: 0.5rem;
-    margin-block-start: 0.5rem;
+    -webkit-margin-before: var(--s-1);
+            margin-block-start: var(--s-1);
   }
 
   p:nth-child(1) {
@@ -362,8 +376,8 @@ button {
   color: var(--main-color);
 
   &+* {
-    -webkit-margin-before: 2rem;
-    margin-block-start: 2rem;
+    -webkit-margin-before: var(--s3);
+            margin-block-start: var(--s3);
   }
 
 }
@@ -373,8 +387,8 @@ button {
   text-align: center;
 
   &+* {
-    -webkit-margin-before: 1rem;
-    margin-block-start: 1rem;
+    -webkit-margin-before: var(--s2);
+            margin-block-start: var(--s2);
   }
 
 }
@@ -384,8 +398,8 @@ button {
   font-size: 1.2rem;
 
   &+* {
-    -webkit-margin-before: 2rem;
-    margin-block-start: 2rem;
+    -webkit-margin-before: var(--s2);
+            margin-block-start: var(--s2);
   }
 }
 
@@ -407,7 +421,8 @@ a[href^=http]::after {
   -webkit-font-smoothing: antialiased;
   font: var(--fa-font-solid);
   content: '\f08e';
-  margin-inline-start: 0.3rem;
+  -webkit-margin-start: 0.3rem;
+          margin-inline-start: 0.3rem;
   font-size: 0.8em;
 }
 
