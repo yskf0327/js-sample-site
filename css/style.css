@@ -142,6 +142,33 @@ body > * + * {
   color: var(--base-color);
 }
 
+/* section */
+.l-section + .l-section {
+  margin-block-start: var(--s3);
+}
+.l-section > p + p {
+  margin-block-start: var(--s0);
+}
+
+/* title */
+.c-title01 {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+.c-title01 a {
+  text-decoration: none;
+  color: var(--base-color);
+}
+
+.c-title02 {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+.c-title02 + * {
+  margin-block-start: var(--s1);
+}
+
 /* nav */
 .l-nav {
   display: flex;
@@ -237,31 +264,14 @@ body > * + * {
   translate: 0 -6px;
 }
 
-/* section */
-.l-section + .l-section {
-  margin-block-start: var(--s3);
-}
-.l-section > p + p {
-  margin-block-start: var(--s0);
+/* tab */
+.c-tab-panel__wrapper {
+  position: relative;
 }
 
-/* title */
-.c-title01 {
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  font-weight: normal;
-}
-.c-title01 a {
-  text-decoration: none;
-  color: var(--base-color);
-}
-
-.c-title02 {
-  text-transform: uppercase;
-  font-size: 1.4rem;
-}
-.c-title02 + * {
-  margin-block-start: var(--s1);
+.c-tab-panel {
+  position: absolute;
+  background-color: grey;
 }
 
 /* utility */
